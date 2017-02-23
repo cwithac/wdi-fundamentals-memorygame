@@ -6,7 +6,7 @@
 	border-radius: 10px;
 	float: left;
 	margin: 8%;
-	
+
 
 }
 	h1 {
@@ -61,10 +61,12 @@ button {
 	background: rgb(2,132,130);
 	color: white;
 	font-size: 20px;
+	margin: 30px;
 }
 
 .activated {
 	background-color: #ffbf00;
+	color: black;
 }
 
 .clearfix:after {
@@ -74,6 +76,3 @@ button {
         clear: both;
         height: 0;
         font-size: 0;
-      
-
-

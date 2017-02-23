@@ -6,8 +6,9 @@ var cardFour = "king";*/
 var cards = ['queen', 'queen', 'king', 'king'];
 var cardsInPlay = [];
 var startGameButton = document.getElementById("start-game");
+var tryAgainButton = document.getElementById("try-again");
 var gameBoard = document.getElementById('game-board');
-	
+
 function createCards() {
 		for (var i = 0; i < cards.length; i++) {
 	var newCard = document.createElement('div');
@@ -32,9 +33,11 @@ function backOfCards() {
 		for (var i = 0; i < cards.length; i++) {
 	var resetCards = document.querySelectorAll('.card')
 	resetCards[i].innerHTML = '<img src="back_of_card.png" alt="Back Of Card" />';
-	startGameButton.className = 'activated';
-	startGameButton.textContent = "Click to Try Again!";
-	}
+		 startGameButton.removeAttribute('class');
+		 startGameButton.textContent = "Playing!";
+		 tryAgainButton.className = 'activated';
+		 tryAgainButton.addEventListener('click', resetBoard);
+	 }
 }
 
 
@@ -58,7 +61,18 @@ function isMatch(cards) {
 			alert("You found a match!");
 		} else {
 			alert("Sorry, try again.");
-		 } 
+		 }
+
+		 startGameButton.removeAttribute('class');
 }
 
-
+function resetBoard() {
+		for (var i = 0; i < cards.length; i++) {
+		var cardsDiv = document.getElementById("cardId")
+		gameBoard.removeChild(cardsDiv);
+		tryAgainButton.removeAttribute('class');
+		startGameButton.className = 'activated';
+		startGameButton.textContent = "Memorized?  Click to Play!";
+	}
+createCards();
+}
