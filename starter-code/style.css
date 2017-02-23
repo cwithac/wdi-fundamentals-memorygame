@@ -6,6 +6,8 @@
 	border-radius: 10px;
 	float: left;
 	margin: 8%;
+	
+
 }
 	h1 {
 		color: rgb(2,132,130);
@@ -15,7 +17,8 @@
 	}
 .board {
 	height: 50%;
-	width: 50%;
+	/*width: 50%;*/
+	width: 450px;
 	display: inline-block;
 }
 
@@ -49,6 +52,19 @@ footer {
 img {
 	height: 200px;
 	width: 150px;
+
+}
+
+button {
+	height: 50px;
+	width: 300px;
+	background: rgb(2,132,130);
+	color: white;
+	font-size: 20px;
+}
+
+.activated {
+	background-color: #ffbf00;
 }
 
 .clearfix:after {
