@@ -55,20 +55,6 @@ img {
 
 }
 
-button {
-	height: 50px;
-	width: 300px;
-	background: rgb(2,132,130);
-	color: white;
-	font-size: 20px;
-	margin: 30px;
-}
-
-.activated {
-	background-color: #ffbf00;
-	color: black;
-}
-
 .clearfix:after {
         visibility: hidden;
         display: block;
