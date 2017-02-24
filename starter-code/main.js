@@ -63,12 +63,13 @@ for (var i = 0; i < cards.length; i++) {
 	}
 }
 
-//reset all scores and cards
+//reset all scores and cards on button click
 var startOver = document.getElementById('start-over');
 startOver.addEventListener('click', startOverGame);
 
 function startOverGame() {
 	resetGame();
+	playerScore = 0;
   currentScore.textContent = 0;
 }
 
