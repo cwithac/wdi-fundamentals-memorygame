@@ -4,6 +4,9 @@ var cards = ['queen', 'queen', 'king', 'king'];
 var cardsInPlay = [];
 var gameBoard = document.getElementById('game-board');
 var allCards = document.getElementsByClassName('card');
+var playerScore = 0;
+var currentScore = document.getElementById('score');
+
 
 //creates new set of div cards within gameBoard div face up first
 //sends to isTwoCards upon clicking a card
@@ -40,6 +43,8 @@ function isTwoCards() {
 //sends to resetGame after alert
 function isMatch(cards) {
 	  if (cards[0] === cards[1]) {
+			playerScore +=1;
+			currentScore.innerHTML = playerScore;
 			setTimeout(function(){ alert("You found a match!"); }, 50);
 	    // alert("You found a match!");
 		} else {
@@ -58,8 +63,18 @@ for (var i = 0; i < cards.length; i++) {
 	}
 }
 
+//reset all scores and cards
+var startOver = document.getElementById('start-over');
+startOver.addEventListener('click', startOverGame);
+
+function startOverGame() {
+	resetGame();
+  currentScore.textContent = 0;
+}
+
 
 //notes :
 // single card double clicked = match
-// time out function for second card to show face?
-// keep track of score? reset with score?
+// more cards, should successful match stay visible?
+// more cards, should front view appear first before playing?
+// more cards, randomize cards?

@@ -6,8 +6,6 @@
 	border-radius: 10px;
 	float: left;
 	margin: 8%;
-
-
 }
 	h1 {
 		color: rgb(2,132,130);
@@ -18,7 +16,7 @@
 .board {
 	height: 50%;
 	/*width: 50%;*/
-	width: 450px;
+	max-width: 450px;
 	display: inline-block;
 }
 
@@ -52,7 +50,14 @@ footer {
 img {
 	height: 200px;
 	width: 150px;
+}
 
+.score {
+		background: rgb(2,132,130);
+		color: white;
+		border: solid black 1px;
+		width: 200px;
+		margin: 0 auto;
 }
 
 .clearfix:after {
