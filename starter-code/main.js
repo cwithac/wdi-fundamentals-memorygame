@@ -40,11 +40,14 @@ function isTwoCards() {
 //sends to resetGame after alert
 function isMatch(cards) {
 	  if (cards[0] === cards[1]) {
-	    alert("You found a match!");
+			setTimeout(function(){ alert("You found a match!"); }, 50);
+	    // alert("You found a match!");
 		} else {
-	    alert("Sorry, try again.");
+			setTimeout(function(){ alert("Sorry, try again."); }, 50);
+			// alert("Sorry, try again.");
 		}
-		resetGame();
+		// resetGame();
+		setTimeout(function(){ resetGame(); }, 50);
 };
 
 //resets cards to 'back', clearing HTML
